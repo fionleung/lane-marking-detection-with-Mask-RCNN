@@ -4,4 +4,6 @@ I trained with 500+ images for 50000 steps.Sample output:
 
 ![image info](./create_inference/output/day.png)
 
+![image info](./create_inference/output/night.png)
 
+![image info](./create_inference/output/night.gif)
