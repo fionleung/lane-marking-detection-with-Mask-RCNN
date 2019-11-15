@@ -1,0 +1,38 @@
+item {
+name: "solid white"    
+id: 1
+    
+}
+
+
+item {
+name:"dashed white"
+id: 2
+  
+}
+
+item {
+name: "solid yellow"    
+id: 3    
+}
+
+
+item {
+name: "dashed yellow"    
+id: 4    
+}
+
+item {
+name: "double yellow"    
+id: 5    
+}
+
+item {
+name: "double white"    
+id: 6    
+}
+
+item {
+name: "crosswalk"    
+id: 7    
+}
