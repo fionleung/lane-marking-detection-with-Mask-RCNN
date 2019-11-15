@@ -2,6 +2,8 @@ This project detects 7 classes of lane marking, including single dashed yellow l
 
 I trained with 500+ images for 50000 steps.Sample output:
 
+![image info](./create_inference/output/day.png)
 
+![night](./create_inference/output/night.png)
 
-
+![viedo](./create_inference/output/viedo.gif)
