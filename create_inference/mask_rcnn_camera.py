@@ -1,5 +1,5 @@
 # USAGE
-# python mask_rcnn_video.py --input videos/cats_and_dogs.mp4 --output output/cats_and_dogs_output.avi --mask-rcnn mask-rcnn-coco
+# python mask_rcnn_video.py --input videos/01.mp4 --mask-rcnn mask-rcnn-coco
 
 # import the necessary packages
 import numpy as np
@@ -26,7 +26,7 @@ ap.add_argument("-t", "--threshold", type=float, default=0.2,
 	help="minimum threshold for pixel-wise mask segmentation")
 args = vars(ap.parse_args())
 
-# load the COCO class labels our Mask R-CNN was trained on
+# load label
 labelsPath = os.path.sep.join([args["mask_rcnn"],
 	"object_detection_classes_coco.txt"])
 LABELS = open(labelsPath).read().strip().split("\n")
@@ -52,15 +52,15 @@ vs=FileVideoStream(args["input"]).start()
 #vs = cv2.VideoCapture(args["input"])
 #fps = vs.get(cv2.CAP_PROP_FPS)
 #print(fps)
-
+#or use this to get input video from webcam
 #vs = VideoStream(src=0).start()
 time.sleep(1.0)
 count=0
 start = time.process_time()
-# loop over frames from the video file stream
-#while True:
+
+#if video from webcam use while True:
 while vs.more():
-	# read the next frame from the video stream and resize it
+	
 	frame = vs.read()
 	count+=1 
 	if count%5!=0:
@@ -74,9 +74,7 @@ while vs.more():
 
 
 
-	# construct a blob from the frame, pass it through the network,
-	# obtain our output predictions, and initialize the list of
-	# bounding box rectangles
+
 	blob = cv2.dnn.blobFromImage(frame_roi, swapRB=True, crop=False)
 	net.setInput(blob)
 	(boxes, masks) = net.forward(["detection_out_final","detection_masks"])
