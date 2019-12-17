@@ -4,9 +4,14 @@
 
     Run it to create a new .config for cv2.dnn
 
-3. download [programs](https://www.pyimagesearch.com/2018/11/19/mask-r-cnn-with-opencv/)
+3. run mask_rcnn.py get  inference from image
+run mask_rcnn_camera.py show viedo inference directly
+run mask_runn_video.py  save inference as video
 
-    Follow instructions to get inferences
+
+   [check reference here](https://www.pyimagesearch.com/2018/11/19/mask-r-cnn-with-opencv/)
+
+    
 
 
 
