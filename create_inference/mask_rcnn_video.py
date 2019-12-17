@@ -16,7 +16,7 @@ import time
 ap = argparse.ArgumentParser()
 ap.add_argument("-i", "--input", required=True,
 	help="path to input video file")
-ap.add_argument("-o", "--output", required=False,
+ap.add_argument("-o", "--output", required=True,
 	help="path to output video file")
 ap.add_argument("-m", "--mask-rcnn", required=True,
 	help="base path to mask-rcnn directory")
